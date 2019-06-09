@@ -22,15 +22,14 @@ Number = [7,3,1,6,7,1,7,6,5,3,1,3,3,0,6,2,4,9,1,9,2,2,5,1,1,9,6,7,4,4,2,6,5,7,4,
 0,5,8,8,6,1,1,6,4,6,7,1,0,9,4,0,5,0,7,7,5,4,1,0,0,2,2,5,6,9,8,3,1,5,5,2,0,0,0,5,5,9,3,5,7,2,9,7,2,5,
 7,1,6,3,6,2,6,9,5,6,1,8,8,2,6,7,0,4,2,8,2,5,2,4,8,3,6,0,0,8,2,3,2,5,7,5,3,0,4,20,7,5,2,9,6,3,4,5,0]
 
-def product(size):
-    current = 1
+def product(size,current):
     for x in range(12, size):
         product = Number[x]*Number[x-1]*Number[x-2]*Number[x-3]*Number[x-4]*Number[x-5]*Number[x-6]*Number[x-7]*Number[x-8]*Number[x-9]*Number[x-10]*Number[x-11]*Number[x-12]
         if product > current:
             current = product
             products.append(current)
 
-product(len(Number))
+product(len(Number),1)
 print(max(products))
 end = time.time()
 print(end - start)
