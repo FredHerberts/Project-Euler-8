@@ -30,9 +30,9 @@ def product(size):
             current = product
             products.append(current)
 
-end = time.time()
-print(end - start)
 product(len(Number))
 print(max(products))
+end = time.time()
+print(end - start)
 
 
